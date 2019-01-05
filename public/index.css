@@ -38,6 +38,9 @@ ul{
     border-radius: 4px;
     border:none;
 }
+.writeMessage2{
+    grid-column: 1/8;
+}
 
 .sendMessage{
     padding:0;
@@ -51,6 +54,11 @@ ul{
     font-family: "Montserrat";
     text-transform: uppercase;
     height: 5rem;
+}
+
+.sendMessage2{
+    grid-column: 8/10;
+    grid-row: 1 / span 1;
 }
 
 .wrapper{
