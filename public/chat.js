@@ -58,10 +58,11 @@ socket.on('goodUser', () => {
 });
 
 socket.on('newUser', (arUsers) => {
+    ul = document.getElementById('users');
+    ul.innerHTML = "";
     for (let i in arUsers) {
         li = document.createElement('li');
         li.appendChild(document.createTextNode(arUsers[i]));
-        ul = document.getElementById('users');
         ul.appendChild(li);
     }
 })
