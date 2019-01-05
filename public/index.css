@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    font-size: 18pt;
+    font-family: 'Muli';
+}
+
+body{
+    margin: 0;
+    padding: 2em;
+    background: #b6d8f9;
+    line-height: 20pt;
+}
+
+ul, textarea, button{border-radius: 4px;}
+ul{
+    overflow-y: scroll;
+}
+
+.container{
+    position: relative;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1170px;
+    max-height: 70vh;
+    background: #429bf4;
+    overflow: hidden;
+}
+
+.writeMessage{
+    background: white;
+    width: 100%;
+    height: 5rem;
+    font-size: 14pt;
+    grid-column: 1/5;
+    padding: 20px;
+    border-radius: 4px;
+    border:none;
+}
+
+.sendMessage{
+    padding:0;
+    margin:0;
+    background-color: #FE9720;
+    color: white;
+    border: none;
+    grid-row: 2/ span 1;
+    grid-column: 1/10;
+    font-size: 24pt;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    height: 5rem;
+}
+
+.wrapper{
+    display: grid;
+    grid-gap: 20px;
+}
+
+.roomHeader{
+    text-align: center;
+    font-size: 40pt;
+    font-family: "Montserrat";
+}
+
+.mainHeader{
+    width: 100%;
+    text-align: center;
+    font-size: 40pt;
+    line-height: 40pt;
+    color: #494949;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.mainHeader > span,
+.mainHeader > i{
+    font-size: inherit;
+    color: #FE9720;
+}
+
+.settings{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30pt;
+    color: white;
+}
+
+.container ul{
+    list-style-type: none;
+    background: white;
+    padding: 20px;
+}
+
+.main ul{
+    min-height: 32vh;
+    max-height: 32vh;
+    background: white;
+}
+
+.sideBar ul{
+    max-height: 19rem;
+}
+
+.container ul > li {
+    margin-bottom: 15px;
+    font-size: 14pt;
+}
+
+.main{
+    grid-column: 3/10;
+    grid-row: 1/1;
+}
+
+.sideBar{
+    grid-column-start: 1;
+    grid-column-end: 3; 
+    background: #FE9720;
+    padding: 10px;
+    max-height: 23rem;
+}
+.sideBar > h1{
+    padding: 0;
+    margin: 0;
+    color: #494949;
+    text-align: center;
+}
+
+.masterGrid{
+    display: grid;
+    grid-gap: 20px;
+}
+
+#loggedIn{
+    display: none;
+}
+
+#badUser{
+    display: none;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    background: #e0595f;
+}
+#badUser > h1{
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+}
+#pastMessages{
+    margin-top: 10px;
+}
+.createRoom{
+    width: 100%;
+    display: block;
+    background-color: #b6d8f9;
+    border: none;
+    padding: 20px;
+    margin-top: 20px;
+    height: 5rem;
+}
+.joinRoom{
+    border: none;
+    display: block;
+    padding: 20px;
+    font-size: 14pt;
+    border-radius: 4px;
+    width: 100%;
+    height: 5rem;
+}
+
+@media(max-width: 799px){
+    *{font-size: 12pt;}
+    .mainHeader{font-size: 30pt;}
+    .roomHeader{font-size: 20pt;}
+    .sideBar{
+        display: none;
+    }
+    .main{
+        grid-column: 1/2;
+    }
+    .sendMessage{
+        grid-column: 1/12;
+        grid-row: 2/2;
+        font-size: 14pt;
+    }
+}
