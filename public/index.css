@@ -23,7 +23,6 @@ ul{
     margin-right: auto;
     width: 100%;
     max-width: 1170px;
-    max-height: 70vh;
     background: #429bf4;
     overflow: hidden;
 }
@@ -167,6 +166,7 @@ ul{
     padding: 20px;
     margin-top: 20px;
     height: 5rem;
+    grid-column: 5/10;
 }
 .joinRoom{
     border: none;
@@ -189,8 +189,16 @@ ul{
         grid-column: 1/2;
     }
     .sendMessage{
-        grid-column: 1/12;
+        grid-column: 1/10;
         grid-row: 2/2;
         font-size: 14pt;
+    }
+    .sendMessage2{
+        grid-column: 1/10;
+        grid-row: 2/2;
+        font-size: 14pt;
+    }
+    .writeMessage2{
+        grid-column: 1/10;
     }
 }
